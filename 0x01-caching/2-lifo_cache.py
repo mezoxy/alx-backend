@@ -10,6 +10,7 @@ class LIFOCache(BaseCaching):
         - Caching system
     '''
     __pwd = None
+    
     def put(self, key, item):
         '''
             put: A methode that assign an item to the dic self.cache_data
