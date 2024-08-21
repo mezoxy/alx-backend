@@ -29,11 +29,14 @@ class MRUCache(BaseCaching):
                     if self.__curDate[i] == max(
                             self.__curDate.values())
                         ][0]
-                print(f'DISCARD: {k}')
-                del self.cache_data[k]
-                del self.__curDate[k]
+                if key in self.cache_data.keys():
+                    self.cache_data[key] = item
+                else:
+                    print(f'DISCARD: {k}')
+                    del self.cache_data[k]
+                    del self.__curDate[k]
+                    self.cache_data[key] = item
                 self.__curDate[key] = datetime.now()
-                self.cache_data[key] = item
 
     def get(self, key):
         '''
