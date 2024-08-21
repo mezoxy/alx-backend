@@ -6,7 +6,7 @@ from base_caching import BaseCaching
 from datetime import datetime
 
 
-class LRUCache(BaseCaching):
+class MRUCache(BaseCaching):
     '''BasicCache defines:
         - Caching system
     '''
