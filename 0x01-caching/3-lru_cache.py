@@ -24,10 +24,11 @@ class LRUCache(BaseCaching):
                 self.cache_data[key] = item
                 self.__curDate[key] = datetime.now()
             else:
-                # print(self.__curDate)
-                # print('#' * 80)
-                # print(self.cache_data)
-                k = [i for i in self.__curDate.keys() if self.__curDate[i] == min(self.__curDate.values())][0]
+                k = [
+                    i for i in self.__curDate.keys()
+                    if self.__curDate[i] == min(
+                            self.__curDate.values())
+                        ][0]
                 print(f'DISCARD: {k}')
                 del self.cache_data[k]
                 del self.__curDate[k]
