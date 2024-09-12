@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+"""
 sk 3: Deletion-resilient hypermedia pagination
 """
 
